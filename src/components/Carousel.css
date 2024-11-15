@@ -1,0 +1,5 @@
+.carousel img {
+    width: 50%;     /* Ajusta el tamaño al 80% del ancho del contenedor */
+    height: 400px;  /* Establece una altura fija para las imágenes */
+    object-fit: cover;
+  }
