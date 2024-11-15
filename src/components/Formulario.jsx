@@ -25,6 +25,11 @@ const Formulario = () => {
           <input type="date" name="fechaSalida" />
         </label>
         <br />
+        <label>
+          Metodo de Pago:
+          <input type="text" name="Metodo de Pago" />
+        </label>
+        <br />
         <button type="submit">Enviar</button>
       </form>
     </div>
