@@ -5,6 +5,12 @@ import "./Formulario.css";
 const Formulario = () => {
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
+  const [fechaInicio, setFechaInicio] = useState('');
+  const [fechaFin, setFechaFin] = useState('');
+  const [tarjetaNumero, setTarjetaNumero] = useState('');
+  const [tarjetaNombre, setTarjetaNombre] = useState('');
+  const [tarjetaFechaExp, setTarjetaFechaExp] = useState('');
+  const [tarjetaCVV, setTarjetaCVV] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,6 +18,12 @@ const Formulario = () => {
     const formData = {
       nombre,
       apellido,
+      fechaInicio,
+      fechaFin,
+      tarjetaNumero,
+      tarjetaNombre,
+      tarjetaFechaExp,
+      tarjetaCVV,
     };
 
     try {
@@ -59,6 +71,69 @@ const Formulario = () => {
           />
         </label>
         <br />
+        <label>
+          Fecha de inicio:
+          <input
+            type="date"
+            name="fechaInicio"
+            value={fechaInicio}
+            onChange={(e) => setFechaInicio(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Fecha de fin:
+          <input
+            type="date"
+            name="fechaFin"
+            value={fechaFin}
+            onChange={(e) => setFechaFin(e.target.value)}
+          />
+        </label>
+        <br />
+        {/* Campos de tarjeta */}
+        <label>
+          Número de tarjeta:
+          <input
+            type="text"
+            name="tarjetaNumero"
+            value={tarjetaNumero}
+            onChange={(e) => setTarjetaNumero(e.target.value)}
+            placeholder="XXXX XXXX XXXX XXXX"
+          />
+        </label>
+        <br />
+        <label>
+          Nombre en la tarjeta:
+          <input
+            type="text"
+            name="tarjetaNombre"
+            value={tarjetaNombre}
+            onChange={(e) => setTarjetaNombre(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Fecha de vencimiento:
+          <input
+            type="month"
+            name="tarjetaFechaExp"
+            value={tarjetaFechaExp}
+            onChange={(e) => setTarjetaFechaExp(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          CVV:
+          <input
+            type="text"
+            name="tarjetaCVV"
+            value={tarjetaCVV}
+            onChange={(e) => setTarjetaCVV(e.target.value)}
+            placeholder="XXX"
+          />
+        </label>
+        <br />
         <button type="submit">Enviar</button>
       </form>
     </div>
@@ -66,3 +141,4 @@ const Formulario = () => {
 };
 
 export default Formulario;
+
