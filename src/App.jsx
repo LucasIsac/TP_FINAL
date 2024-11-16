@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import NotFound from "./Pages/NotFound";
 import Formulario from "./components/Formulario";
 import InicioSesion from "./components/InicioSesion";
+import Apartamentos from "./Pages/Apartamentos";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Paquetes" element={<Paquetes />} />
           <Route path="/Formulario" element={<Formulario />} />
           <Route path="/InicioSesion" element={<InicioSesion />} />
+          <Route path="/Apartamentos" element={<Apartamentos />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />

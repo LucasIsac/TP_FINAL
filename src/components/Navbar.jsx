@@ -34,13 +34,13 @@ function Navbar() {
               >
                 <li>
                   <NavLink className="dropdown-item" to="/Paquetes">
-                    Action
+                    Hotel
                   </NavLink>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
+                  <NavLink className="dropdown-item" to="/Apartamentos">
+                    Apartamento
+                  </NavLink>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
